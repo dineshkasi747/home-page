@@ -1,0 +1,233 @@
+:root {
+    --ss-primary-color: #5897fb;
+    --ss-bg-color: #0000;
+    --ss-font-color: #fff;
+    --ss-font-placeholder-color: #ffffff80;
+    --ss-disabled-color: #8a8a8a;
+    --ss-border-color: #ffffff29;
+    --ss-highlight-color: #fffb8c;
+    --ss-error-color: red;
+    --ss-main-height: 50px;
+    --ss-content-height: 300px;
+    --ss-spacing-l: 24px;
+    --ss-spacing-m: 8px;
+    --ss-spacing-s: 3px;
+    --ss-animation-timing: 0.3s;
+    --ss-border-radius: 0px;
+}
+
+/* ================= FONTS ================= */
+
+@font-face {
+    font-family: FranieL;
+    src: url(./fonts/Franie-Light.woff2);
+}
+@font-face {
+    font-family: FranieR;
+    src: url(./fonts/Franie-Regular.woff2);
+}
+@font-face {
+    font-family: FranieSL;
+    src: url(./fonts/Franie-SemiLight.woff2);
+}
+@font-face {
+    font-family: NunitoSansL;
+    src: url(./fonts/NunitoSans_10pt-Light.ttf);
+}
+@font-face {
+    font-family: NunitoSansR;
+    src: url(./fonts/NunitoSans_10pt-Regular.ttf);
+}
+@font-face {
+    font-family: NunitoSansSB;
+    src: url(./fonts/NunitoSans_10pt-SemiBold.ttf);
+}
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    color: var(--ss-font-color);
+    background: #000;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+#page,
+#page1,
+#page2,
+#page3 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+
+canvas {
+    position: relative;
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 40px 30px 0;
+}
+
+/* KASI LOGO */
+.logo svg {
+    display: block;
+}
+
+
+.logo path {
+  fill: #fff;
+}
+
+
+.logo text {
+    fill: var(--ss-font-color);
+}
+
+/* MENU BUTTON */
+#nav button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#nav button i {
+    font-size: 32px;
+    color: var(--ss-font-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#nav button:hover i {
+    color: var(--ss-primary-color);
+    transform: rotate(90deg);
+}
+
+/* ================= HERO SECTION ================= */
+
+#loop {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    height: 25%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.text {
+    width: 100%;
+}
+
+.text h1 {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: FranieR;
+    font-size: clamp(64px, 32px + 2.5vw, 80px);
+    font-weight: 200;
+    letter-spacing: 2.7em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.hero-description {
+    font-family: FranieL;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: .26em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    font-family: FranieR;
+    font-size: 15px;
+    letter-spacing: .04em;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-white {
+    background: #fff;
+    color: #000;
+}
+
+.btn-blue {
+    background: #283fff;
+    color: #fff;
+}
+
+/* ================= PAGE CONTENT ================= */
+
+#page1,
+#page2,
+#page3 {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.text-wrap {
+    width: 400px;
+}
+
+.text-wrap h3 {
+    font-family: FranieL;
+    font-size: clamp(24px, -8px + 2.5vw, 40px);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.text-wrap p {
+    font-family: NunitoSansL;
+    font-size: clamp(16px, 6px + .78vw, 21px);
+}
+
+.text-wrap button {
+    font-family: FranieL;
+    font-size: 15px;
+    padding: 17px 40px;
+    background: #cccccc3d;
+    border-radius: 0.4rem;
+    margin-top: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
